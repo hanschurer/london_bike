@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createRef } from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Box } from "@material-ui/core";
 import useStyles from "./styles.js";
 import StationDetails from "../StationDetails/StationDetails";
 const List = ({ stations, childClicked }) => {
@@ -16,7 +16,9 @@ const List = ({ stations, childClicked }) => {
 
   return (
     <div className={classes.container}>
-      <Typography variant="h4">Bike station around you</Typography>
+      <Box sx={{ mt: 3 }} />
+      <Typography variant="h4">Explore the bike stations around you</Typography>
+      <Box sx={{ mt: 8 }} />
       <Grid container spacing={3} className={classes.list}>
         {stations?.map((station, i) => (
           <Grid ref={elRefs[i]} item key={i} xs={12}>
