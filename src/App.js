@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Grid, CssBaseline } from "@material-ui/core";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
-import { getAllStations, getNearbyStations } from "./api";
+import { getNearbyStations } from "./api";
 import Map from "./components/Map/Map";
 
 export default function App() {
@@ -32,7 +32,6 @@ export default function App() {
   const onPlaceChanged = () => {
     const lat = autocomplete.getPlace().geometry.location.lat();
     const lng = autocomplete.getPlace().geometry.location.lng();
-
     setCoords({ lat, lng });
   };
 

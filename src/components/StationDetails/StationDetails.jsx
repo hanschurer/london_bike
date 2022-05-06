@@ -1,12 +1,9 @@
 import React from 'react'
-import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Chip } from '@material-ui/core';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import PhoneIcon from '@material-ui/icons/Phone';
+import { Box, Typography, Card, CardContent} from '@material-ui/core';
 
-import useStyles from './styles.js';
 
 const StationDetails = ({station,selected, refProp }) => {
-  const classes = useStyles();
+
   if (selected) refProp?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   return (
